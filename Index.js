@@ -12,26 +12,40 @@ class VNCPaste {
         this.canvas = null;
         this.isInitialized = false;
         this.specialKeys = new Map([
-            ['@', { key: '2', shiftKey: true }],
-            ['#', { key: '3', shiftKey: true }],
-            ['$', { key: '4', shiftKey: true }],
-            ['%', { key: '5', shiftKey: true }],
-            ['^', { key: '6', shiftKey: true }],
-            ['&', { key: '7', shiftKey: true }],
-            ['*', { key: '8', shiftKey: true }],
-            ['(', { key: '9', shiftKey: true }],
-            [')', { key: '0', shiftKey: true }],
-            ['_', { key: '-', shiftKey: true }],
-            ['+', { key: '=', shiftKey: true }],
-            ['{', { key: '[', shiftKey: true }],
-            ['}', { key: ']', shiftKey: true }],
-            ['|', { key: '\\', shiftKey: true }],
-            [':', { key: ';', shiftKey: true }],
-            ['"', { key: "'", shiftKey: true }],
-            ['<', { key: ',', shiftKey: true }],
-            ['>', { key: '.', shiftKey: true }],
-            ['?', { key: '/', shiftKey: true }]
-        ]);
+    // chiffres et spéciaux AZERTY
+    ['&', { key: '1' }],
+    ['é', { key: '2' }],
+    ['"', { key: '3' }],
+    ["'", { key: '4' }],
+    ['(', { key: '5' }],
+    ['-', { key: '6' }],
+    ['è', { key: '7' }],
+    ['_', { key: '8' }],
+    ['ç', { key: '9' }],
+    ['à', { key: '0' }],
+    [')', { key: '°' }],
+    ['=', { key: '+' }],
+
+    // AltGr mappings (indispensable pour SSH keys)
+    ['@', { key: '0', altKey: true }],
+    ['#', { key: '3', altKey: true }],
+    ['[', { key: '5', altKey: true }],
+    [']', { key: '°', altKey: true }],
+    ['{', { key: '4', altKey: true }],
+    ['}', { key: '°', altKey: true }],
+    ['\\', { key: '8', altKey: true }],
+    ['|', { key: '6', altKey: true }],
+    ['~', { key: '2', altKey: true }],
+
+    // QWERTY -> AZERTY corrections
+    ['a', { key: 'q' }],
+    ['q', { key: 'a' }],
+    ['w', { key: 'z' }],
+    ['z', { key: 'w' }],
+    ['m', { key: ',' }],
+    [',', { key: 'm' }],
+    [';', { key: 'm', shiftKey: true }]
+            ]);
     }
 
     log(...args) {
