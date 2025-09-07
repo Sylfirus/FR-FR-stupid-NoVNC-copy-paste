@@ -12,39 +12,76 @@ class VNCPaste {
         this.canvas = null;
         this.isInitialized = false;
         this.specialKeys = new Map([
-    // chiffres et spéciaux AZERTY
-    ['&', { key: '1' }],
-    ['é', { key: '2' }],
-    ['"', { key: '3' }],
-    ["'", { key: '4' }],
-    ['(', { key: '5' }],
-    ['-', { key: '6' }],
-    ['è', { key: '7' }],
-    ['_', { key: '8' }],
-    ['ç', { key: '9' }],
-    ['à', { key: '0' }],
-    [')', { key: '°' }],
-    ['=', { key: '+' }],
+            // chiffres et spéciaux AZERTY
+            ['&', { key: '1' }],
+            ['é', { key: '2' }],
+            ['"', { key: '3' }],
+            ["'", { key: '4' }],
+            ['(', { key: '5' }],
+            ['-', { key: '6' }],
+            ['è', { key: '7' }],
+            ['_', { key: '8' }],
+            ['ç', { key: '9' }],
+            ['à', { key: '0' }],
+            [')', { key: '°' }],
+            ['=', { key: '+' }],
 
-    // AltGr mappings (indispensable pour SSH keys)
-    ['@', { key: '0', altKey: true }],
-    ['#', { key: '3', altKey: true }],
-    ['[', { key: '5', altKey: true }],
-    [']', { key: '°', altKey: true }],
-    ['{', { key: '4', altKey: true }],
-    ['}', { key: '°', altKey: true }],
-    ['\\', { key: '8', altKey: true }],
-    ['|', { key: '6', altKey: true }],
-    ['~', { key: '2', altKey: true }],
+            // AltGr mappings (indispensable pour SSH keys)
+            ['@', { key: '0', altKey: true }],
+            ['#', { key: '3', altKey: true }],
+            ['[', { key: '5', altKey: true }],
+            [']', { key: '°', altKey: true }],
+            ['{', { key: '4', altKey: true }],
+            ['}', { key: '°', altKey: true }],
+            ['\\', { key: '8', altKey: true }],
+            ['|', { key: '6', altKey: true }],
+            ['~', { key: '2', altKey: true }],
 
-    // QWERTY -> AZERTY corrections
-    ['a', { key: 'q' }],
-    ['q', { key: 'a' }],
-    ['w', { key: 'z' }],
-    ['z', { key: 'w' }],
-    ['m', { key: ',' }],
-    [',', { key: 'm' }],
-    [';', { key: 'm', shiftKey: true }]
+            // QWERTY -> AZERTY corrections
+            ['a', { key: 'q' }],
+            ['q', { key: 'a' }],
+            ['w', { key: 'z' }],
+            ['z', { key: 'w' }],
+            ['m', { key: ',' }],
+            [',', { key: 'm' }],
+            [';', { key: 'm', shiftKey: true }],
+            ['A', { key: 'Q', shiftKey: true }],
+            ['Q', { key: 'A', shiftKey: true }],
+            ['W', { key: 'Z', shiftKey: true }],
+            ['Z', { key: 'W', shiftKey: true }],
+            ['M', { key: '?' }],
+            ['?', { key: 'M', shiftKey: true }],
+            
+            // ponctuation courante
+            ['.', { key: ';' }],
+            [';', { key: '.' }],
+            ['/', { key: ':' }],
+            [':', { key: '/' }],
+            ['!', { key: '1', shiftKey: true }],
+            ['²', { key: '2', shiftKey: true }],
+
+            // majuscules QWERTY -> AZERTY
+            ['B', { key: 'B', shiftKey: true }],
+            ['C', { key: 'C', shiftKey: true }],
+            ['D', { key: 'D', shiftKey: true }],
+            ['E', { key: 'E', shiftKey: true }],
+            ['F', { key: 'F', shiftKey: true }],
+            ['G', { key: 'G', shiftKey: true }],
+            ['H', { key: 'H', shiftKey: true }],
+            ['I', { key: 'I', shiftKey: true }],
+            ['J', { key: 'J', shiftKey: true }],
+            ['K', { key: 'K', shiftKey: true }],
+            ['L', { key: 'L', shiftKey: true }],
+            ['N', { key: 'N', shiftKey: true }],
+            ['O', { key: 'O', shiftKey: true }],
+            ['P', { key: 'P', shiftKey: true }],
+            ['R', { key: 'R', shiftKey: true }],
+            ['S', { key: 'S', shiftKey: true }],
+            ['T', { key: 'T', shiftKey: true }],
+            ['U', { key: 'U', shiftKey: true }],
+            ['V', { key: 'V', shiftKey: true }],
+            ['X', { key: 'X', shiftKey: true }],
+            ['Y', { key: 'Y', shiftKey: true }]
             ]);
     }
 
